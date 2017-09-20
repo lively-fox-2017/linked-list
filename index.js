@@ -12,7 +12,6 @@ class LinkedList {
       current.next = new LinkedList(element);
     } else {
       current.element = element;
-      current.next = null;
     }
   }
 
@@ -20,10 +19,17 @@ class LinkedList {
     if (this.element === null) {
       return -1;
     }
-    let next = this.next;
-    let result = this.element;
-    this.element = next.element;
-    this.next = next.next;
+    let result;
+    let current = this;
+    if (current.next === null) {
+      result = current.element
+      current.element = null;
+    } else {
+      while (current.next.next !== null)
+        current = current.next;
+      result = current.next.element;
+      current.next = null;
+    }
     return result;
   }
 
@@ -35,6 +41,7 @@ class LinkedList {
 }
 
 let test = new LinkedList();
+console.log(test.popElement());
 for (let i = 0; i < 10; i++) {
   test.insertElement(i);
 }
