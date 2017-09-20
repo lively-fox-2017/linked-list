@@ -34,9 +34,6 @@ class LinkedList {
   }
 }
 
-let a = [1, 2, 3, 4];
-let b = [4, 3, 2, 1];
-
 let test = new LinkedList();
 for (let i = 0; i < 10; i++) {
   test.insertElement(i);
