@@ -4,7 +4,7 @@ class LinkedList {
     this.next = null;
   }
 
-  insertElement(element) {
+  pushElement(element) {
     let current = this;
     if (current.element !== null) {
       while (current.next !== null)
@@ -41,9 +41,10 @@ class LinkedList {
 }
 
 let test = new LinkedList();
-console.log(test.popElement());
+test.print();
+test.pushElement(100);
 for (let i = 0; i < 10; i++) {
-  test.insertElement(i);
+  test.pushElement(i);
 }
 test.print();
 let coba = test.popElement();
