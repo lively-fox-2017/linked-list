@@ -52,4 +52,5 @@ a.push(3);
 a.push(4);
 a.push(5);
 a.pop();
+a.pop();
 a.print();
