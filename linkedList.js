@@ -73,7 +73,7 @@ class LinkedList {
     if (position<0||position>length) {
       throw new Error(message.failure);
     }
-    //lakukan penghapusan dengan melakukan pencarian terlebih dahulu posisi yang akan dihapus
+    //lakukan perulangan sampai posisi yang dicari ditemukan
     while (count<position){
       currentNode=currentNode.next;
       count++;
